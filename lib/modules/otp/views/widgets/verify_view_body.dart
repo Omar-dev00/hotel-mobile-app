@@ -126,41 +126,41 @@ class VerifyViewody extends StatelessWidget {
               ),
 
               // TODO: timer dynamic
-              // Obx(
-              //   () => Text(
-              //     '(00:${controller.seconds.value})',
-              //     style: const TextStyle(
-              //         fontSize: 16,
-              //         fontWeight: FontWeight.w600,
-              //         color: Color(0xff9d9d9d)),
-              //   ),
-              // ),
+              Obx(
+                () => Text(
+                  '(00:${controller.seconds.value})',
+                  style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xff9d9d9d)),
+                ),
+              ),
 
               // timer with get builder
-              GetBuilder<OtpController>(
-                  builder: (_) => Column(
-                        children: [
-                          if (_.newSeconds > 0)
-                            Text(
-                              '(00:${_.newSeconds})',
-                              style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xff9d9d9d)),
-                            ),
-                          if (_.newSeconds == 0)
-                            InkWell(
-                              onTap: () => _.startTimer(),
-                              child: Text(
-                                'Resend OTP',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xff9d9d9d)),
-                              ),
-                            ),
-                        ],
-                      ))
+              // GetBuilder<OtpController>(
+              //     builder: (_) => Column(
+              //           children: [
+              //             if (_.newSeconds > 0)
+              //               Text(
+              //                 '(00:${_.newSeconds})',
+              //                 style: const TextStyle(
+              //                     fontSize: 16,
+              //                     fontWeight: FontWeight.w600,
+              //                     color: Color(0xff9d9d9d)),
+              //               ),
+              //             if (_.newSeconds == 0)
+              //               InkWell(
+              //                 onTap: () => _.startTimer(),
+              //                 child: Text(
+              //                   'Resend OTP',
+              //                   style: TextStyle(
+              //                       fontSize: 16,
+              //                       fontWeight: FontWeight.w600,
+              //                       color: Color(0xff9d9d9d)),
+              //                 ),
+              //               ),
+              //           ],
+              //         ))
             ],
           )
         ],
